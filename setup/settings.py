@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'tempus_dominus',
+    'widget_tweaks',
     'passagens',
     'django.contrib.admin',
     'django.contrib.auth',

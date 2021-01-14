@@ -1,13 +1,14 @@
 
 {% extends 'base.html' %}
 {% block content %}
-<section class='col-8' >
+{% load widget_tweaks %}
+<section class='container col-8' >
     <form action="{% url 'minha_consulta' %}" method="POST">
         {% csrf_token %}
         {% for field in form.visible_fields %}
         <div class="form-group">
             <label for="{{field.id_for_label}}">{{field.label}}</label>
-            {{field}}
+            {{field|add_class:'form-control'}}
         </div>
         {% endfor%}
         <input type="submit" class="btn btn-success" value="Ok">
